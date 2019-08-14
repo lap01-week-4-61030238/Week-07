@@ -1,0 +1,18 @@
+@startuml
+class Person
+{
+    + <<virtual>> SayHi()   
+}
+ class Student
+{    
+    + <<override>> SayHi()   
+}
+class Teacher
+{
+    + <<new>> SayHi()   
+} 
+
+Person <|-- Student
+Person <|-- Teacher
+
+@enduml

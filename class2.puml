@@ -1,0 +1,10 @@
+@startuml
+ class Teacher
+ class AssocProf
+ class AssisProf
+ class Professor
+ Teacher <|-- AssocProf
+ Teacher <|-- AssisProf
+ Teacher <|-- Professor
+ 
+@enduml
