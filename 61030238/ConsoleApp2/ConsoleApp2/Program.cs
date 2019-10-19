@@ -10,40 +10,42 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+            Program print = new Program();
 
-           
 
         }
-        class Professor : Teacher
+        class Program
         {
-            private float emolument;  // เงินประจำตำแหน่ง
-
-            public Professor(string name, float billingRate) : base(name, billingRate)
+            void print(int i)
             {
+                Console.WriteLine("Printing int: {0}", i);
             }
 
-            public Professor(string name, float billingRate, float emolument)
-            : this(name, billingRate)
+            void print(double f)
             {
-                this.emolument = emolument;
+                Console.WriteLine("Printing float: {0}", f);
             }
 
-            // new function, because it's different than the base version
-            public new float CalculateCharge(float hours)
+            void print(string s)
             {
-                if (hours < 1.0F)
-                    hours = 1.0F; // minimum charge.
-                return (hours * billingRate) + emolument;
+                Console.WriteLine("Printing string: {0}", s);
             }
-            // new function, because it's different than the base version
-            public new string TypeName()
+
+            static void Main(string[] args)
             {
-                return ("Professor");
+                Program p = new Program();
+                p.print(5);
+                p.print((5.26f).ToString());
+                p.print(264.2871);
+                p.print((int)1354.23);
+                p.print("Hello World of C#");
+                Console.ReadKey();
             }
+        }
+    }
 
         }
 
-    }
-    
+        
 
 
