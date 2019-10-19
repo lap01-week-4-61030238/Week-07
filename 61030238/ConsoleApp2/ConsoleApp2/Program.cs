@@ -10,9 +10,9 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+
+            Console.WriteLine(StudentID);
            
-
-
         }
         class TraineeStudent
         {
@@ -25,7 +25,7 @@ namespace ConsoleApp1
             }
             static void getSalary()
             {
-                Console.WriteLine(StudentID);
+                return StudentID;
             }
             static void getStudentID()
             {
