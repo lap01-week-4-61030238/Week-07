@@ -12,14 +12,14 @@ namespace ConsoleApp1
         {
 
 
-            Student su = new Student("Student Name", "12345678");
+            TraineeStudent su = new TraineeStudent("Student Name", "12345678");
             try
             {
                 
-                su.GPA = 7f;
-                Console.WriteLine("Student name : " + su.Name);
+                su.salary = 350f
+                ;
                 Console.WriteLine("Student ID   : " + su.ID);
-                Console.WriteLine("Student GPA  : " + su.GPA);
+                Console.WriteLine("Student salary : " + su.salary);
             }
             catch (Exception e)
             {
@@ -28,36 +28,27 @@ namespace ConsoleApp1
             Console.ReadLine();
         }
     }
-    class Student
+    class TraineeStudent
     {
-        private string name;
+        
         private string id;
-        private float gpa;
+        private float salary;
 
-        public Student(string Name, string ID)
-        {
-            this.name = Name;   // assign auto variable to the field
-            this.id = ID;
-        }
 
-        public string Name
-        {
-            get { return name; }
-        }
         public string ID
         {
             get { return id; }
         }
-        public float GPA
+        public float salary
         {
             get
             {
-                return gpa;
+                return salary;
             }
             set
             {
-                if (value > 0.0 && value <= 4.0)
-                    gpa = value;
+                if (value > 300 && value <= 400)
+                    salary  = value;
                 else
                     throw (new Exception("Error!!!! invalid GPA"));
             }
