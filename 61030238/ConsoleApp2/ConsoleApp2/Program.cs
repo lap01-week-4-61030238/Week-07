@@ -10,17 +10,31 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Student NARATIP = new Student();
+           
 
 
         }
         class TraineeStudent
         {
-            private string  StudentID ;
-
+            private string StudentID;
             private string salary;
+            public TraineeStudent (string ID,string SALARY)
+            { 
+            this.StudentID=ID;
+            this.salary=SALARY;
+            }
+            static void getSalary()
+            {
+                Console.WriteLine(StudentID);
+            }
+            static void getStudentID()
+            {
+                Console.WriteLine(salary);
+            }
+
         }
-        }
+
+    }
     }
 
 
