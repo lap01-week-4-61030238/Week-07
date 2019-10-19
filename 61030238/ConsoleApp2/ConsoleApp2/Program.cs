@@ -12,21 +12,34 @@ namespace ConsoleApp1
         {
 
 
-            Student su = new Student();
-            su.Name = "Student Name";
-            su.ID = "12345678";
-            su.GPA = 7.5f;
-            Console.WriteLine("Student name : " + su.Name);
-            Console.WriteLine("Student ID   : " + su.ID);
-            Console.WriteLine("Student GPA  : " + su.GPA);
-            Console.ReadLine();
+            Person p = new Professor();
+            p.SayHi();
+            Console.ReadKey();
         }
     }
-    class Student
+
+    class Person
     {
-        public string Name;
-        public string ID;
-        public float GPA;
+        public virtual void SayHi()
+        {
+            Console.WriteLine("Hi I'm a person");
+        }
+    }
+
+    class Student : Person
+    {
+        public override void SayHi()
+        {
+            Console.WriteLine("Hi I'm a student");
+        }
+    }
+
+    class Teacher : Person
+    {
+        public new void SayHi()
+        {
+            Console.WriteLine("Hi I'm a teacher");
+        }
     }
 }
 
