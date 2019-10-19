@@ -30,7 +30,22 @@ namespace ConsoleApp1
     }
     class TraineeStudent
     {
-        
+
+        private string name;
+        private string id;
+        private float gpa;
+
+        public Student(string Name, string ID)
+        {
+            this.name = Name;   // assign auto variable to the field
+            this.id = ID;
+        }
+
+        public string Name
+        {
+            get { return name; }
+        }
+
         private string id;
         private float salary;
 
