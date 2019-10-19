@@ -16,7 +16,7 @@ namespace ConsoleApp1
             try
             {
 
-                su.salary = 300f
+                su.salary = 3.1f
                 Console.WriteLine("Student name : " + su.Name);
                 Console.WriteLine("Student ID   : " + su.ID);
                 Console.WriteLine("Student salary  : " + su.salary);
