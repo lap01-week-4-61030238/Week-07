@@ -15,7 +15,7 @@ namespace ConsoleApp1
             Student su = new Student();
             su.Name = "Student Name";
             su.ID = "12345678";
-            su.GPA = 7.5f;
+            su.GPA = 7.6f;
             Console.WriteLine("Student name : " + su.Name);
             Console.WriteLine("Student ID   : " + su.ID);
             Console.WriteLine("Student GPA  : " + su.GPA);
