@@ -11,8 +11,11 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
 
-            Console.WriteLine(StudentID);
-           
+            int StudentID;
+            StudentID = int.Parse(Console.ReadLine());
+
+
+
         }
         class TraineeStudent
         {
@@ -23,7 +26,7 @@ namespace ConsoleApp1
             this.StudentID=ID;
             this.salary=SALARY;
             }
-            static void getSalary()
+            static void getSalary(add int StudentID)
             {
                 return StudentID;
             }
