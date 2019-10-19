@@ -16,7 +16,7 @@ namespace ConsoleApp1
             try
             {
 
-                su.salary = 3.1f
+                su.salary = 3.1f;
                 Console.WriteLine("Student name : " + su.Name);
                 Console.WriteLine("Student ID   : " + su.ID);
                 Console.WriteLine("Student salary  : " + su.salary);
@@ -32,7 +32,7 @@ namespace ConsoleApp1
     {
         private string name;
         private string id;
-        private float salary;
+        private int salary;
 
         public Student(string Name, string ID)
         {
@@ -48,7 +48,7 @@ namespace ConsoleApp1
         {
             get { return id; }
         }
-        public float salary
+        public int salary
         {
             get
             {
@@ -56,7 +56,7 @@ namespace ConsoleApp1
             }
             set
             {
-                if (value > 0.0 && value <= 4.0)
+                if (value > 300 && value <= 450)
                     salary = value;
                 else
                     throw (new Exception("Error!!!! invalid salary"));
