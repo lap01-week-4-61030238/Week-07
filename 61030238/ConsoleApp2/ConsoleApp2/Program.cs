@@ -10,31 +10,39 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-           
 
+            Teacher teacher = new Teacher("Tom", 350f);
+            // teacher work for 20Hr/month
+            Console.WriteLine("{0} charge = {1}", teacher.TypeName(),
+                teacher.CalculateCharge(20f));
+            Console.ReadLine();
 
         }
-        class TraineeStudent
+        class Teacher
         {
-            private string StudentID;
-            private string salary;
-            public TraineeStudent (string ID,string SALARY)
-            { 
-            this.StudentID=ID;
-            this.salary=SALARY;
-            }
-            static void getSalary()
+            // constructor (for initial private/protected variables)
+            public Teacher(string name, float billingRate)
             {
-                Console.WriteLine(StudentID);
+                this.name = name;
+                this.billingRate = billingRate;
             }
-            static void getStudentID()
+            // figure out the charge based on teacher's rate
+            public float CalculateCharge(float hours)
             {
-                Console.WriteLine(salary);
+                return (hours * billingRate);
             }
-
+            // return the name of this type
+            public string TypeName()
+            {
+                return ("Teacher");
+            }
+            private string name;
+            protected float billingRate;
         }
 
     }
+
     }
+    
 
 
