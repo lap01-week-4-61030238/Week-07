@@ -10,19 +10,43 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+            Person p = new Person();
+            p.SayHi();
+            Student s = new Student();
+            s.SayHi();
+            Person sp = new Student();
+            sp.SayHi();
+            Teacher t = new Teacher();
+            t.SayHi();
+            Person tp = new Teacher();
+            tp.SayHi();
+            Console.ReadKey();
+        }
+            class Person
+        {
+            public virtual void SayHi()
+            {
+                Console.WriteLine("Hi I'm a person");
+            }
+        }
 
+        class Student : Person
+        {
+            public override void SayHi()
+            {
+                Console.WriteLine("Hi I'm a student");
+            }
+        }
 
-            Teacher teacher = new Teacher("Tom", 350f);
-            Professor prof = new Professor("Jerry", 500f, 5000f);
-            // teacher work 20Hr/month
-            Console.WriteLine("{0} charge = {1}", teacher.TypeName(),
-                teacher.CalculateCharge(20f));
-            // professor work 12Hr/month
-            Console.WriteLine("{0} charge = {1}", prof.TypeName(),
-                prof.CalculateCharge(12F));
-            Console.ReadLine();
+        class Teacher : Person
+        {
+            public new void SayHi()
+            {
+                Console.WriteLine("Hi I'm a teacher");
+            }
         }
     }
+    }
     
-}
+
 
